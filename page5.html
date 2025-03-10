@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey Continues</title>
+    <!-- TODO: Import your CSS File here -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="page5" type="get">
+        <section class="container">
+            <h1>The Journey Continues</h1>
+            <p>With the guardian's riddle behind you, the path forward splits into three. Each route is known to favor certain traits: strength, wisdom, or stealth. Choose your path wisely, as it will influence the challenges you face ahead.</p>
+            <!-- Your Form -->
+            <header>Choose your path:</header>
+            <label>
+                <select name="pathChoice" id="pathChoice">
+                    <option value="" disabled selected>~~Please Choose an Option~~</option>
+                    <option value="page6.html">Strength Route</option>
+                    <option value="page6.html">Wisdom Route</option>
+                    <option value="page5b.html">Stealth Route</option>
+
+
+
+                </select>
+            </label>
+            <button type="button" id="submitButton" onclick ="redirectUser()" style="background-color: blue;">Continue on Your Journey</button>
+
+            <p>Your choice will not only test your abilities but also reveal deeper truths about your character.</p>
+
+        </section>
+       
+    </form>
+
+<script>
+   function validateForm(){
+    let selection = document.getElementById("pathChoice");
+    if(selection.value === ""){
+        alert("Please select a option!")
+        return false;
+    }
+    return true;
+   }
+
+   function redirectUser(){
+        let selection = document.getElementById("pathChoice");
+        let selectedVal = selection.value;
+
+        if(!selectedVal){
+            alert("Please select a option!")
+            return;
+        }
+
+        window.location.href = selectedVal;
+   }
+
+</script>
+</body>
+</html>
