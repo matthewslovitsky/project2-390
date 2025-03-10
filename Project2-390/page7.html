@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusion</title>
+    <!-- TODO: Import your CSS File here -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Your Quest Has Concluded</h1>
+        <p>Based on your choices, [Insert a dynamic conclusion based on the user's journey and final decision]. The kingdom will remember your deeds for generations to come.</p>
+        <p>We hope you enjoyed your adventure. Would you like to provide feedback on your experience?</p>
+
+        <fieldset>
+            <legend>Feedback</legend>
+            <textarea name="feedback" id="feedback" cols="50" rows="10"></textarea>
+        </fieldset>
+       <br><br>
+       <button type="submit" onclick="submitFeedback()">Submit Feedback</button>
+       <button type="submit" onclick = "window.location.href='welcome.html';">Play Again</button>
+
+       <br><br>
+       <p>I would Like to say thank you to Ninad for giving me the ability to learn HTML
+        without his knowledge I wouldn't be able to make cool websites like this!
+       </p>
+    </section>
+</body>
+<script>
+    function submitFeedback(){
+        document.getElementById("feedback")
+        alert("Thank you for your feedback! Redirecting to homescreen!")
+        window.location.href = 'welcome.html';
+    }
+</script>
+</html>
